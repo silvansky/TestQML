@@ -1,0 +1,9 @@
+
+Makefile
+
+*.o
+*.app
+*.pro.user
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
