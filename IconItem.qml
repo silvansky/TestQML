@@ -27,7 +27,7 @@ Component {
 			}
 			states: State {
 				name: "active"; when: loc.currentId == gridId
-				PropertyChanges { target: item; x: loc.mouseX - width/2; y: loc.mouseY - height/2; scale: 0.5; z: 10 }
+				PropertyChanges { target: item; x: loc.mouseX - width/2; y: loc.mouseY - height/2; scale: 0.8; z: 10 }
 			}
 			transitions: Transition { NumberAnimation { property: "scale"; duration: 200} }
 		}

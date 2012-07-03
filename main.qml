@@ -2,7 +2,7 @@ import QtQuick 1.1
 
 Rectangle {
 	width: 450;  height: 450
-	color: "#00222222"
+	color: "#00222222" // transparent
 	GridView {
 		id: grid
 		interactive: false
