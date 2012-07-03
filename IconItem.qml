@@ -18,13 +18,13 @@ Component {
 			}
 			Behavior on x { enabled: item.state != "active"; NumberAnimation { duration: 400; easing.type: Easing.OutBack } }
 			Behavior on y { enabled: item.state != "active"; NumberAnimation { duration: 400; easing.type: Easing.OutBack } }
-			SequentialAnimation on rotation {
+			/*SequentialAnimation on rotation {
 				NumberAnimation { to:  2; duration: 60 }
 				NumberAnimation { to: -2; duration: 120 }
 				NumberAnimation { to:  0; duration: 60 }
 				running: loc.currentId != -1 && item.state != "active"
 				loops: Animation.Infinite; alwaysRunToEnd: true
-			}
+			}*/
 			states: State {
 				name: "active"; when: loc.currentId == gridId
 				PropertyChanges { target: item; x: loc.mouseX - width/2; y: loc.mouseY - height/2; scale: 0.8; z: 10 }

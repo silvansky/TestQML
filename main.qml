@@ -20,7 +20,12 @@ Rectangle {
 			property int index: grid.indexAt(mouseX, mouseY) // Item underneath cursor
 			id: loc
 			anchors.fill: parent
-			onPressAndHold: currentId = icons.get(newIndex = index).gridId
+			onPressAndHold: {
+				newIndex = index;
+				console.log(newIndex)
+				if (newIndex != -1)
+					currentId = icons.get(newIndex).gridId
+			}
 			onReleased: currentId = -1
 			onMousePositionChanged:
 			    if (loc.currentId != -1 && index != -1 && index != newIndex)
@@ -28,4 +33,3 @@ Rectangle {
 		}
 	}
 }
-
